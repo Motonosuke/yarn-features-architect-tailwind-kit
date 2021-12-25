@@ -27,7 +27,7 @@
       }
     }
   },
-  "plugins": ["react", "react-hooks", "@typescript-eslint", "jsx-a11y", "import"],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "jsx-a11y", "import", "typescript-custom-sort-keys"],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -44,14 +44,40 @@
     "react/react-in-jsx-scope": "off", // for TypeScript
     "@typescript-eslint/consistent-type-definitions": ["warn", "interface"],
     "react/jsx-sort-props": "error",
-    "react-hooks/exhaustive-deps": "warn"
-
+    "react-hooks/exhaustive-deps": "warn",
+    "typescript-custom-sort-keys/interface": [
+      "warn",
+      "asc",
+      {
+        "caseSensitive": true,
+        "displayFirst": ["id"],
+        "showFunctionsAtEnd": true
+      }
+    ]
   },
   "overrides": [
-      {
+    {
       // TypeScript 用に設定を上書く
       "files": ["*.ts", "*.tsx"],
       "rules": {}
+    },
+    {
+      "files": "src/**/*",
+      "rules": {
+        "no-restricted-imports": ["warn", { "patterns": ["./", "../"] }]
+      }
+    },
+    {
+      "files": "src/**/*",
+      "excludedFiles": ["src/pages/_app.tsx", "src/presentation/components/common/**/*"],
+      "rules": {
+        "no-restricted-imports": [
+          "error",
+          {
+            "patterns": ["@chakra-ui/*"]
+          }
+        ]
+      }
     },
     {
       // import を sort するため、AutoFix をかける範囲で設定を上書く
@@ -60,15 +86,7 @@
         "import/order": [
           "error",
           {
-            "groups": [
-              "builtin",
-              "external",
-              "parent",
-              "sibling",
-              "index",
-              "object",
-              "type"
-            ],
+            "groups": ["builtin", "external", "parent", "sibling", "index", "object", "type"],
             "pathGroups": [
               {
                 "pattern": "@alias/**",
@@ -82,12 +100,6 @@
             "newlines-between": "always"
           }
         ]
-      }
-    },
-    {
-      "files": "src/**/*",
-      "rules": {
-        "no-restricted-imports": ["warn", { "patterns": ["./", "../"] }]
       }
     }
   ]
