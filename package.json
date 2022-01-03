@@ -8,7 +8,8 @@
     "start": "next start",
     "format": "prettier --write 'src/**/*.{js,ts,tsx,json}'",
     "lint": "eslint --ext .js,.ts,.tsx 'src/**/*.{js,ts,tsx}'",
-    "lint:fix": "eslint --ext .js,.ts,.tsx --fix 'src/**/*.{js,ts,tsx}' && prettier --write 'src/**/*.{js,ts,tsx,json}'"
+    "lint:fix": "eslint --ext .js,.ts,.tsx --fix 'src/**/*.{js,ts,tsx}' && prettier --write 'src/**/*.{js,ts,tsx,json}'",
+    "lint:github-actions": "eslint --ext .js,.ts,.tsx"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.10",
