@@ -9,7 +9,20 @@
     "format": "prettier --write 'src/**/*.{js,ts,tsx,json}'",
     "lint": "eslint --ext .js,.ts,.tsx 'src/**/*.{js,ts,tsx}'",
     "lint:fix": "eslint --ext .js,.ts,.tsx --fix 'src/**/*.{js,ts,tsx}' && prettier --write 'src/**/*.{js,ts,tsx,json}'",
-    "lint:github-actions": "eslint --ext .js,.ts,.tsx"
+    "lint:github-actions": "eslint --ext .js,.ts,.tsx",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./src/**/*.{jsx,js,tsx,ts}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.10",
@@ -34,6 +47,8 @@
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-typescript-custom-sort-keys": "^1.0.5",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.3.2",
     "prettier": "^2.4.1",
     "typescript": "4.4.4"
   }
