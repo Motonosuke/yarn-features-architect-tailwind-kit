@@ -5,10 +5,11 @@ import { useSampleViewModel } from 'presentation/view-models/pages/sample/sample
 
 export const SampleContainer = () => {
   const { sampleData } = useSampleViewModel();
-  console.log('🚀 ~ file: SampleContainer.tsx ~ line 7 ~ SampleContainer ~ sampleData', sampleData);
+
   return (
     <div>
       <SamplePresentation />
+      {sampleData}
     </div>
   );
 };
