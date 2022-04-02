@@ -38,7 +38,9 @@
     "@types/react": "17.0.33",
     "@typescript-eslint/eslint-plugin": "^5.2.0",
     "@typescript-eslint/parser": "^5.2.0",
-    "eslint": "^8.1.0",
+    "axios": "^0.26.1",
+    "axios-case-converter": "^0.9.0",
+    "eslint": "7.32.0",
     "eslint-config-next": "12.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-typescript": "^2.5.0",
@@ -52,6 +54,13 @@
     "husky": "^7.0.0",
     "lint-staged": "^12.3.2",
     "prettier": "^2.4.1",
-    "typescript": "4.4.4"
+    "swr": "^1.2.2",
+    "typescript": "4.4.4",
+    "zod": "^3.14.3"
+  },
+  "nextBundleAnalysis": {
+    "budget": 358400,
+    "budgetPercentIncreaseRed": 20,
+    "showDetails": true
   }
 }
