@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useFetchPosts } from 'features/posts';
-import { PostContainer } from 'pages/post/PostContainer';
+import { PostContainer } from 'features/posts/components/post-container';
 
 const Post = () => {
   const { data } = useFetchPosts();

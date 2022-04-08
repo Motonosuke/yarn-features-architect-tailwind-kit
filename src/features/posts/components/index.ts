@@ -1,1 +1,1 @@
-export * from './posts-list';
+export * from './post-container';
