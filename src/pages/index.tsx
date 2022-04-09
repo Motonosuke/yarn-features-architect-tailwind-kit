@@ -1,10 +1,12 @@
 import type { NextPage } from 'next';
 
+import { Box } from 'components/Miscellaneous/Box';
+
 const Home: NextPage = () => {
   return (
-    <div>
+    <Box>
       <p>Top Page</p>
-    </div>
+    </Box>
   );
 };
 

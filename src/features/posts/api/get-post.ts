@@ -15,7 +15,5 @@ export const useFetchPosts = () => {
 
 const getPosts = async (url: string): Promise<Posts> => {
   const { data } = await axios.get<Posts>(url);
-  return PostsEntity.new({
-    ...data,
-  });
+  return PostsEntity.new(data);
 };

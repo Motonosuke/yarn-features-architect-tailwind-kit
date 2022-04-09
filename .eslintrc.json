@@ -82,14 +82,14 @@
     },
     {
       "files": "src/**/*",
-      
+
       "rules": {
         "no-restricted-imports": ["error", { "patterns": ["./", "../"] }]
       }
     },
     {
       "files": "src/**/*",
-      "excludedFiles": ["src/pages/_app.tsx", "src/presentation/components/common/**/*"],
+      "excludedFiles": ["src/pages/_app.tsx", "src/components/**/*"],
       "rules": {
         "no-restricted-imports": [
           "error",
