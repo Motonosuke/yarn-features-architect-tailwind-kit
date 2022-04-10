@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box } from 'components/Miscellaneous/Box';
+import { Box } from 'components/chakra-parts/Layout/Box';
 import { useFetchPosts } from 'features/posts';
 import { PostContainer } from 'features/posts/components/post-container';
 

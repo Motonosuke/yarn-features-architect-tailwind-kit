@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 
-import { Box } from 'components/Miscellaneous/Box';
+import { Box } from 'components/chakra-parts/Layout/Box';
 
 const Home: NextPage = () => {
   return (

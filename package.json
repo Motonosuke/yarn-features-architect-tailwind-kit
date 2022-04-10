@@ -34,6 +34,7 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@chakra-ui/icons": "^1.1.7",
     "@types/node": "16.11.6",
     "@types/react": "17.0.33",
     "@typescript-eslint/eslint-plugin": "^5.2.0",
