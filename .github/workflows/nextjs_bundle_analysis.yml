@@ -1,6 +1,7 @@
 name: 'Next.js Bundle Analysis'
 
 on:
+  push:
   pull_request:
     branches:
       - main
