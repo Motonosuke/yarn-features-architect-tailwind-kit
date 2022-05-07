@@ -1,10 +1,10 @@
 import Axios, { AxiosRequestConfig } from 'axios';
 
-import { env } from 'constants/env';
+import { ENV } from 'constants/env';
 import storage from 'utils/storage';
 
 export const axios = Axios.create({
-  baseURL: env.API_URL,
+  baseURL: ENV.API_URL,
   timeout: 5000,
 });
 
