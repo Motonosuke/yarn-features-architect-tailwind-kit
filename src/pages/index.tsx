@@ -6,6 +6,7 @@ const Home: NextPage = () => {
   return (
     <Box>
       <p>Top Page</p>
+      <p>Top Page</p>
     </Box>
   );
 };
