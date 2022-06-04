@@ -9,9 +9,7 @@ const Post = () => {
   return (
     <Box>
       index.page
-      <>
-        <PostContainer data={data} />
-      </>
+      <PostContainer data={data} />
     </Box>
   );
 };
