@@ -2,11 +2,12 @@ import type { CustomNextPage } from 'next';
 
 import { MainLayout } from 'components/Layout';
 import { Box } from 'components/chakra-parts/Layout/Box';
+import { Text } from 'components/chakra-parts/Typography';
 
 const Home: CustomNextPage = () => {
   return (
     <Box>
-      <p>Top Page</p>
+      <Text>Top Page</Text>
     </Box>
   );
 };

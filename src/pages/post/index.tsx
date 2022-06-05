@@ -8,7 +8,6 @@ const Post = () => {
   const { data } = useFetchPosts();
   return (
     <Box>
-      index.page
       <PostContainer data={data} />
     </Box>
   );
