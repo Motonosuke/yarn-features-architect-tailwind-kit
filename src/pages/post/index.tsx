@@ -6,6 +6,7 @@ import { PostContainer } from 'features/posts/components/post-container';
 
 const Post = () => {
   const { data } = useFetchPosts();
+
   return (
     <Box>
       <PostContainer data={data} />
