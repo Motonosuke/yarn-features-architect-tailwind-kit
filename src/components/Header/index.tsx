@@ -17,9 +17,7 @@ export const Header = () => {
     >
       <Box>
         <Link href={ROUTE_PATHS.HOME}>
-          <a href={ROUTE_PATHS.HOME}>
-            <Text>Home</Text>
-          </a>
+          <Text>Home</Text>
         </Link>
       </Box>
       <HStack spacing={4}>
