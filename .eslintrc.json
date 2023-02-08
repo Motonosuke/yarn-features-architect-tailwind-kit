@@ -123,7 +123,7 @@
     },
     {
       "files": "src/**/*",
-      "excludedFiles": ["src/components/theme/Theme.ts"],
+      "excludedFiles": ["src/libs/chakra.ts"],
       "rules": {
         "sort-keys": ["error", "asc", { "caseSensitive": true, "natural": true, "minKeys": 2 }],
         "sort-keys-fix/sort-keys-fix": "warn"

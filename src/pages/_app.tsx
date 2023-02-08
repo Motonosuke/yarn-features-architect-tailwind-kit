@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 import { AppProps } from 'next/app';
 import { ReactElement, ReactNode } from 'react';
 
-import { theme } from 'components/theme/Theme';
+import { theme } from 'libs/chakra';
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
