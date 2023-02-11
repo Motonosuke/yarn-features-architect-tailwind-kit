@@ -1,3 +1,7 @@
+type RoutePaths = {
+  [key in string]: `/${string}` | { [key in string]: `/${string}` } | `https://${string}`;
+};
+
 export const ROUTE_PATHS = {
   HOME: '/',
   LOGIN: '/login',
@@ -5,9 +9,4 @@ export const ROUTE_PATHS = {
     ACCOUNT: '/setting/account',
     EMAIL: '/setting/email',
   },
-} as const;
-
-type SettingRouteType = typeof ROUTE_PATHS.SETTING;
-type SettingRoute = SettingRouteType[keyof SettingRouteType];
-
-export type RoutePathType = typeof ROUTE_PATHS.LOGIN | SettingRoute;
+} as const satisfies RoutePaths;
