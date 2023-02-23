@@ -70,6 +70,6 @@ page-components
     </div>
     <div style={{ margin-top: '10px' }}>
       <Albums />
-     </div>
+    </div>
   </div>
 ```
