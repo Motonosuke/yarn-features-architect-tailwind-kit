@@ -1,34 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
+```
+src
+├── components        # アプリケーション全体で使用できる共通コンポーネント
+├── constants         # pathや環境変数などをエクスポートするところ
+├── features          # 機能ベースモジュール
+├── hooks             # アプリケーション全体で使用できる共通hooks
+├── libs              # ライブラリをアプリケーション用に設定して再度エクスポートしたもの
+├── providers         # アプリケーションのすべてのプロバイダー
+├── stores            # グローバルステートストア
+├── page-components   # featuresのコンポーネントを集約するところ
+├── pages             # Nextjsのルーティングシステム
+├── styles            # アプリケーション全体で使用されるCSS（上書きなどを想定）
+├── types             # アプリケーション全体で使用される基本的な型の定義
+└── utils             # 共通のユーティリティ関数
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## components
+comonentsでは、HeaderやFooterなど共通パーツや、Elementsファイル内にボタンやスピナーなど粒度の小さいUI要素を置く場所。
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
+components
+├─ Elements/
+│  ├─ Button/
+│  │  ├─ Button.tsx/
+│  │  ├─ Button.stories.tsx/
+│  │  ├─ index.ts/
+├─ Header/
+├─ Footer/
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## features
+components、hooksなどこのディレクトリ階層は必要に応じて増えたり（redcuerやactionなど）、減ったり（testsやstoriesなど）する予定。
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+features
+├─ posts/
+│  ├─ components/
+│  │  ├─ Posts.tsx/
+│  │  ├─ index.ts/
+│  ├─ hooks/
+│  │  ├─ useHoge.ts/
+│  │  ├─ index.ts/
+│  ├─ apis/
+│  │  ├─ get-posts.ts/
+│  │  ├─ index.ts/
+│  ├─ types/
+│  │  ├─ posts-type.ts/
+│  │  ├─ index.ts/
+│  ├─ tests/
+│  ├─ stories/
+```
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## page-components
+featuresのcomponentをレイアウトに合うように置いていく場所。<br />
+基本的にdivタグとcoponentでスタイルを調整して、表示するページ要件に合うように配置していく。<br />
+Nextjsのpagesルーティング内でなるべく依存関係を作らないように一つレイヤーを挟むイメージ。
+```
+page-components
+├─ posts/
+│  ├─ Page.tsx/
+│  ├─ index.ts/ 
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+// Page
+ <div>
+    <div>
+      <Posts />
+    </div>
+    <div style={{ margin-top: '10px' }}>
+      <Albums />
+     </div>
+  </div>
+```
