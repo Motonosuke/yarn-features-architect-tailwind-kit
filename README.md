@@ -71,5 +71,5 @@ page-components
     <div style={{ margin-top: '10px' }}>
       <Albums />
     </div>
-  </div>
+ </div>
 ```
