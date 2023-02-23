@@ -63,6 +63,7 @@ page-components
 ```
 
 ```
+// Page
  <div>
     <div>
       <Posts />
