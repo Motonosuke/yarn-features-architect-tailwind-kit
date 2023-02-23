@@ -31,7 +31,8 @@
     "framer-motion": "^9.0.1",
     "next": "13.1.6",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "recoil": "^0.7.6"
   },
   "devDependencies": {
     "@chakra-ui/icons": "^2.0.17",
