@@ -1,7 +1,7 @@
 import { CustomNextPage } from 'next';
 
+import { MainLayout } from 'components/Layouts';
 import { HomePage } from 'page-components/home';
-import { MainLayout } from 'page-layouts/main';
 
 const Home: CustomNextPage = (props) => {
   return <HomePage {...props} />;
