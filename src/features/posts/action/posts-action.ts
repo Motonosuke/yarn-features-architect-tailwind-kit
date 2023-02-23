@@ -1,4 +1,4 @@
-import { Posts } from 'features/posts';
+import { Posts } from 'features/posts/types';
 
 export const PostsActionTypes = {
   SET_POSTS: 'SET_POSTS',
