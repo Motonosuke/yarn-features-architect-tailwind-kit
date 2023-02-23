@@ -1,4 +1,4 @@
-import { PostsAction, PostsActionTypes } from 'features/posts/action';
+import { PostsAction, PostsActionTypes } from 'features/posts/actions';
 import { Posts } from 'features/posts/types';
 
 interface PostsState {

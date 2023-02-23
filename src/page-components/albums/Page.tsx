@@ -11,6 +11,7 @@ export const AlbumsPage: FC = () => {
       <Box mt={20}>
         <Albums />
       </Box>
+      <div style={{ margin: '29px' }}>a</div>
     </Box>
   );
 };
