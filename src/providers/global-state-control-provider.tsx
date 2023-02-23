@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 
-import { Box } from 'components/chakra-parts/Layout';
 import { useAlbums } from 'features/albums/hooks';
 import { useAlbumsState, useAlbumsMutators } from 'stores/albums';
 
@@ -19,5 +18,5 @@ export const GlobalStateControlProvider = ({ children }: Props) => {
     }
   }, [albumsGlobalState, albumsData, setAlbumsState]);
 
-  return <Box>{children}</Box>;
+  return <div>{children}</div>;
 };

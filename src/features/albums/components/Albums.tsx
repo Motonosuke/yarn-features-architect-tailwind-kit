@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { LoadingSpinner } from 'components/Loading';
-import { UnorderedList, ListItem } from 'components/chakra-parts/DataDisplay';
 import { useAlbumsState } from 'stores/albums';
 
 export const Albums: React.FunctionComponent = () => {
@@ -10,10 +9,10 @@ export const Albums: React.FunctionComponent = () => {
   if (!albumsGlobalState) return <LoadingSpinner />;
 
   return (
-    <UnorderedList>
+    <ul>
       {albumsGlobalState?.map((album) => (
-        <ListItem key={album.id}>{album.title}</ListItem>
+        <li key={album.id}>{album.title}</li>
       ))}
-    </UnorderedList>
+    </ul>
   );
 };
