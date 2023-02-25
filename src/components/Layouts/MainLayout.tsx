@@ -8,8 +8,7 @@ export const MainLayout: CustomLayout = (page) => {
   return (
     <main>
       <Header />
-      {/* <div height={`calc(100vh - ${HEADER_HEIGHT}px)`} mt={20} mx="auto" width="70vw"> */}
-      <div>{page}</div>
+      <div className="w-4/5  mx-auto mt-10">{page}</div>
     </main>
   );
 };

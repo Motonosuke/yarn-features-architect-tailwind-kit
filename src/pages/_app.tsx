@@ -2,6 +2,7 @@ import { NextPage } from 'next';
 import { AppProps } from 'next/app';
 import { ReactElement, ReactNode } from 'react';
 import { RecoilRoot } from 'recoil';
+import 'tailwindcss/tailwind.css';
 
 import { GlobalStateControlProvider } from 'providers/global-state-control-provider';
 
