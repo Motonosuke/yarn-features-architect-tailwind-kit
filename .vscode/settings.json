@@ -10,5 +10,6 @@
   "eslint.alwaysShowStatus": true,
   "prettier.configPath": ".prettierrc.json",
   "prettier.prettierPath": "node_modules/prettier",
-  "prettier.requireConfig": true
+  "prettier.requireConfig": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative"
 }
