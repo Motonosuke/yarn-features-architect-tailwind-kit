@@ -49,7 +49,7 @@
   "rules": {
     "react/prop-types": "off", // for Next.js
     "react/react-in-jsx-scope": "off", // for TypeScript
-    "@typescript-eslint/consistent-type-definitions": ["warn", "interface"],
+    // "@typescript-eslint/consistent-type-definitions": ["warn", "interface"],
     "react/jsx-sort-props": "error",
     "react-hooks/exhaustive-deps": "warn",
     "typescript-custom-sort-keys/interface": [
@@ -82,7 +82,7 @@
     },
     {
       "files": "src/**/*",
-      "excludedFiles": ["src/components/**/*"],
+      "excludedFiles": ["src/components/**/*", "src/page-components/**/*", "src/features/**/*"],
       "rules": {
         "no-restricted-imports": ["error", { "patterns": ["./", "../"] }]
       }
