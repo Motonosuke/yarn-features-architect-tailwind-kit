@@ -8,7 +8,7 @@ export const MainLayout: CustomLayout = (page) => {
   return (
     <main>
       <Header />
-      <div className="w-4/5  mx-auto mt-10">{page}</div>
+      <div className="mx-auto  mt-10 w-4/5">{page}</div>
     </main>
   );
 };

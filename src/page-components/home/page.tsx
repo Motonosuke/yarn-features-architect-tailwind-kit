@@ -5,7 +5,7 @@ import { Posts } from 'features/posts/components';
 export const HomePage: FC = () => {
   return (
     <div>
-      <p className="text-2xl text-center">Post</p>
+      <p className="text-center text-2xl">Post</p>
       <div className="mt-20">
         <Posts />
       </div>

@@ -4,7 +4,7 @@ import { ROUTE_PATHS } from 'constants/route-paths';
 
 export const Header = () => {
   return (
-    <div className="flex justify-between items-center h-16 px-20 w-full bg-pink-100">
+    <div className="flex h-16 w-full items-center justify-between bg-pink-100 px-20">
       <div>
         <Link href={ROUTE_PATHS.HOME}>
           <p>Home</p>
