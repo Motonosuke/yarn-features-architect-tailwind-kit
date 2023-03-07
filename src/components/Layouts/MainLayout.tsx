@@ -6,9 +6,11 @@ import { Header } from 'components/Header';
 
 export const MainLayout: CustomLayout = (page) => {
   return (
-    <main>
+    <>
       <Header />
-      <div className="mx-auto  mt-10 w-4/5">{page}</div>
-    </main>
+      <main>
+        <div className="mx-auto mt-10 w-4/5">{page}</div>
+      </main>
+    </>
   );
 };
