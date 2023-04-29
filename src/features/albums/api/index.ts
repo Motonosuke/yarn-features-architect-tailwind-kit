@@ -1,1 +1,1 @@
-export { useFetchAlbums } from './get-albums';
+export { useGetAlbums } from './get-albums';

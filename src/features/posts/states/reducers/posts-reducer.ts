@@ -1,9 +1,9 @@
-import { PostsAction, PostsActionTypes } from 'features/posts/actions';
+import { PostsAction, PostsActionTypes } from 'features/posts/states/actions';
 import { Posts } from 'features/posts/types';
 
-interface PostsState {
+type PostsState = {
   posts: Posts[];
-}
+};
 
 export const postsInitialState = {
   posts: [],

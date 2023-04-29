@@ -1,1 +1,1 @@
-export { useAlbums } from './useAlbums';
+export { useFetchAlbums } from './useFetchAlbums';

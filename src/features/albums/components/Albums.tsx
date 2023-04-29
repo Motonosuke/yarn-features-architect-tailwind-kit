@@ -10,7 +10,7 @@ export const Albums: React.FunctionComponent = () => {
 
   return (
     <ul>
-      {albumsGlobalState?.map((album) => (
+      {albumsGlobalState.map((album) => (
         <li key={album.id}>{album.title}</li>
       ))}
     </ul>

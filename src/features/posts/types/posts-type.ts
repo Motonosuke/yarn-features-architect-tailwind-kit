@@ -6,11 +6,9 @@ const zPostScheme = z.object({
   title: z.string(),
   userId: z.number(),
 });
-
-export type Post = z.infer<typeof zPostScheme>;
-
 const zPostsScheme = z.array(zPostScheme);
 
+export type Post = z.infer<typeof zPostScheme>;
 export type Posts = z.infer<typeof zPostsScheme>;
 
 export class PostsEntity {

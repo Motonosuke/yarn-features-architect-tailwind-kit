@@ -8,7 +8,7 @@ import { axios } from 'libs/axios';
  * @returns
  */
 
-export const useFetchPosts = () => {
+export const useGetPosts = () => {
   return useSWR(`https://jsonplaceholder.typicode.com/posts`, (url: string) => getPosts(url), {
     suspense: false,
   });

@@ -8,7 +8,7 @@ import { axios } from 'libs/axios';
  * @returns
  */
 
-export const useFetchAlbums = () => {
+export const useGetAlbums = () => {
   return useSWR(`https://jsonplaceholder.typicode.com/albums`, (url: string) => getAlbums(url), {
     suspense: false,
   });

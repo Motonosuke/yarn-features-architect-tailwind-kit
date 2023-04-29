@@ -1,26 +1,20 @@
 import { NextPage } from 'next';
 import { AppProps } from 'next/app';
-import { ReactElement, ReactNode } from 'react';
-import { RecoilRoot } from 'recoil';
+import { ReactElement } from 'react';
+
 import 'tailwindcss/tailwind.css';
 
-import { GlobalStateControlProvider } from 'providers/global-state-control-provider';
-
 type NextPageWithLayout = NextPage & {
-  getLayout?: (page: ReactElement) => ReactNode;
+  getLayout?: (page: ReactElement) => ReactElement;
 };
 
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
 
-const NextApp: NextPage<AppProps> = ({ Component, pageProps }: AppPropsWithLayout) => {
+const NextApp: NextPage<AppPropsWithLayout> = ({ Component, pageProps }) => {
   const getLayout = Component.getLayout ?? ((page) => page);
-  return (
-    <RecoilRoot>
-      <GlobalStateControlProvider>{getLayout(<Component {...pageProps} />)}</GlobalStateControlProvider>
-    </RecoilRoot>
-  );
+  return getLayout(<Component {...pageProps} />);
 };
 
 export default NextApp;

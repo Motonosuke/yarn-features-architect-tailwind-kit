@@ -5,11 +5,9 @@ const zAlbumScheme = z.object({
   title: z.string(),
   userId: z.number(),
 });
-
-export type Album = z.infer<typeof zAlbumScheme>;
-
 const zAlbumsScheme = z.array(zAlbumScheme);
 
+export type Album = z.infer<typeof zAlbumScheme>;
 export type Albums = z.infer<typeof zAlbumsScheme>;
 
 export class AlbumsEntity {

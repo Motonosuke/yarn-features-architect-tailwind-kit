@@ -47,6 +47,7 @@
     "eslint-plugin-typescript-sort-keys": "^2.3.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
+    "nookies": "^2.5.2",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.4",

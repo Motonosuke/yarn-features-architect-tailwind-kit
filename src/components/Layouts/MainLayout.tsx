@@ -1,16 +1,19 @@
+import { RecoilRoot } from 'recoil';
+
 import type { CustomLayout } from 'next';
 
 import { MainHeader } from 'components/Header';
-
-// const HEADER_HEIGHT = 64;
+import { GlobalStateMainLayoutProvider } from 'providers/global-state-control-provider/global-state-main-layout-provider';
 
 export const MainLayout: CustomLayout = (page) => {
   return (
-    <>
-      <MainHeader />
-      <main>
-        <div className="mx-auto mt-10 w-4/5">{page}</div>
-      </main>
-    </>
+    <RecoilRoot>
+      <GlobalStateMainLayoutProvider>
+        <MainHeader />
+        <main>
+          <div className="mx-auto mt-10 w-4/5">{page}</div>
+        </main>
+      </GlobalStateMainLayoutProvider>
+    </RecoilRoot>
   );
 };

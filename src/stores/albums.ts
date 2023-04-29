@@ -3,9 +3,9 @@ import { atom, useRecoilValue, useSetRecoilState } from 'recoil';
 
 import { Albums } from 'features/albums/types';
 
-interface AlbumsState {
+type AlbumsState = {
   albums: Albums | null;
-}
+};
 
 const albumsRecoilState = atom<AlbumsState>({
   default: { albums: null },

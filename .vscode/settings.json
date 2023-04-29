@@ -1,15 +1,17 @@
 {
+  // Commoon
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // EsLint
+  // ESLintに対応しているファイルは保存時にESLintによるフォーマットを行う
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "eslint.format.enable": true,
   "eslint.packageManager": "yarn",
   "eslint.run": "onSave",
-  "eslint.alwaysShowStatus": true,
+  // Prettier
   "prettier.configPath": ".prettierrc.json",
   "prettier.prettierPath": "node_modules/prettier",
-  "prettier.requireConfig": true,
-  "typescript.preferences.importModuleSpecifier": "non-relative"
+  // プロジェクトに.prettierrcが存在する場合のみフォーマットを行う
+  "prettier.requireConfig": true
 }
