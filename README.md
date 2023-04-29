@@ -1,3 +1,10 @@
+## メインライブラリ
+- TypeScript
+- Next.js
+- Tailwind CSS
+- ESlint
+- Prettier
+
 ## ディレクトリ構成
 
 ```
@@ -31,7 +38,7 @@ components
 ```
 
 ## features
-components、hooksなどこのディレクトリ階層は必要に応じて増えたり（redcuerやactionなど）、減ったり（testsやstoriesなど）する予定。
+components、hooksなどこのディレクトリ階層は必要に応じて増えたり、減ったり（testsやstoriesなど）する。
 
 ```
 features
@@ -75,3 +82,17 @@ page-components
     </div>
  </div>
 ```
+
+## 命名規則
+コード命名規則はESlintの設定に準する。
+
+### src/のディレクトリ・ファイル命名規則
+| 対象ファイル | 命名規則  |
+|:-----------|:------------|
+| components |パスカルケース（PascalCase） |
+| hooks       | キャメルケース（camelCase）|
+| 上記以外 |ケバブケース（kebab-case）|
+
+* src/pagesのpath（url）について <br />
+以下参考に２単語以上の英単語の場合はケバブケース（kebab-cse）を推奨。<br />
+[Google検索セントラル](https://developers.google.com/search/docs/crawling-indexing/url-structure?hl=ja)
