@@ -1,7 +1,7 @@
 ## メインライブラリ
 - TypeScript
 - Next.js
-- 
+- Recoil
 - Tailwind CSS
 - ESlint
 - Prettier
