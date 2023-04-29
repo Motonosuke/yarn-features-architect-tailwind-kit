@@ -25,88 +25,92 @@
       }
     }
   },
-  "plugins": [
-    "react",
-    // "react-hooks",
-    "@typescript-eslint",
-    "jsx-a11y",
-    "import",
-    "typescript-custom-sort-keys",
-    "sort-destructure-keys",
-    "sort-keys-fix"
-  ],
+  "plugins": ["react", "tailwindcss", "@typescript-eslint", "sort-destructure-keys", "typescript-sort-keys"],
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended",
-    // "plugin:react-hooks/recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:jsx-a11y/recommended",
     "next",
     "next/core-web-vitals",
+    "plugin:tailwindcss/recommended",
     "prettier"
   ],
   "rules": {
-    "react/prop-types": "off", // for Next.js
-    "react/react-in-jsx-scope": "off", // for TypeScript
-    // "@typescript-eslint/consistent-type-definitions": ["warn", "interface"],
-    "react/jsx-sort-props": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "typescript-custom-sort-keys/interface": [
-      "warn",
-      "asc",
+    "no-console": ["error", { "allow": ["warn", "info", "error"] }],
+    "prefer-const": "error",
+    "no-restricted-syntax": ["error", { "selector": "TSEnumDeclaration" }],
+
+    // react
+    "react/display-name": "error",
+    "react/jsx-handler-names": [
+      "error",
       {
-        "caseSensitive": true,
-        "displayFirst": ["id"],
-        "showFunctionsAtEnd": true
+        "eventHandlerPrefix": "handle",
+        "eventHandlerPropPrefix": "on",
+        "checkLocalVariables": false,
+        "checkInlineFunction": true
       }
     ],
-    "@typescript-eslint/no-unused-vars": ["error", { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }],
-    "no-console": ["error", { "allow": ["warn", "info", "error"] }],
     "react/destructuring-assignment": ["error", "always"],
-    "sort-destructure-keys/sort-destructure-keys": 2,
+    "react-hooks/exhaustive-deps": "warn",
+
+    //  typescript
+    "@typescript-eslint/no-unused-vars": ["error", { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }],
     "@typescript-eslint/naming-convention": [
       "error",
+      {
+        "selector": ["function", "method"],
+        "format": ["camelCase"]
+      },
+      {
+        "selector": "typeLike",
+        "format": ["PascalCase", "UPPER_CASE"]
+      },
+      {
+        "selector": ["variable", "parameter"],
+        "types": ["boolean", "string", "number", "array"],
+        "format": ["camelCase"]
+      },
       {
         "selector": "variable",
         "types": ["boolean"],
         "format": ["PascalCase"],
         "prefix": ["is", "should", "has", "can", "did", "will", "no"]
       }
+    ],
+
+    // sort
+    "typescript-sort-keys/interface": [
+      "error",
+      "asc",
+      { "caseSensitive": false, "natural": true, "requiredFirst": true }
+    ],
+    "typescript-sort-keys/string-enum": "error",
+    "react/jsx-sort-props": ["error", { "shorthandFirst": true }],
+    "sort-destructure-keys/sort-destructure-keys": 2,
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "parent", "sibling", "index", "object", "type"],
+        "pathGroups": [
+          {
+            "pattern": "@alias/**",
+            "group": "parent",
+            "position": "before"
+          }
+        ],
+        "alphabetize": {
+          "order": "asc"
+        },
+        "newlines-between": "always"
+      }
     ]
   },
   "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "rules": {}
-    },
     {
       "files": "src/**/*",
       "excludedFiles": ["src/components/**/*", "src/page-components/**/*", "src/features/**/*"],
       "rules": {
         "no-restricted-imports": ["error", { "patterns": ["./", "../"] }]
-      }
-    },
-    {
-      "files": ["src/**/*.{js,jsx,ts,tsx}"],
-      "rules": {
-        "import/order": [
-          "error",
-          {
-            "groups": ["builtin", "external", "parent", "sibling", "index", "object", "type"],
-            "pathGroups": [
-              {
-                "pattern": "@alias/**",
-                "group": "parent",
-                "position": "before"
-              }
-            ],
-            "alphabetize": {
-              "order": "asc"
-            },
-            "newlines-between": "always"
-          }
-        ]
       }
     }
   ]
