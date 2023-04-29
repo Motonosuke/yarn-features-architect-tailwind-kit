@@ -90,6 +90,7 @@ page-components
 | 対象ファイル | 命名規則  |
 |:-----------|:------------|
 | components |パスカルケース（PascalCase） |
+| page-components |パスカルケース（PascalCase） |
 | hooks       | キャメルケース（camelCase）|
 | 上記以外 |ケバブケース（kebab-case）|
 
