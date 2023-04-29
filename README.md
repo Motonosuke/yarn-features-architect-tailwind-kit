@@ -44,8 +44,8 @@ components
 
 ### Layouts
 LayoutsではMainLayoutやErrorLayoutなどを置く。<br />
-_app.tsxでproviderを沢山ネストさせないために、_app.tsxでは必要最低限の処理を書き、他はLayout毎にに定義してFirst Load JS shared by allを少なくさせる。
-* Layoutが切り替わってしまう場合は、各Layoutに定義されている状態を保持できないので注意する。
+_app.tsxでproviderを沢山ネストさせないために、_app.tsxでは必要最低限の処理を書き、他はLayout毎にに定義してFirst Load JS shared by allを少なくさせる。<br />
+＊ Layoutが切り替わってしまう場合は、各Layoutに定義されている状態を保持できないので注意する。
 ```
 ─ Layouts/
   ├─ MainLayout.tsx/
@@ -76,7 +76,7 @@ _app.tsxでproviderを沢山ネストさせないために、_app.tsxでは必�
 
 ## features
 components、hooksなどこのディレクトリ階層は必要に応じて増えたり、減ったり（states、tests、storiesなど）する。<br />
-statesはreducerやcookies、localstorageなどを定義する。
+＊ statesはreducerやcookie、localstorageなどを定義する。
 
 ```
 features
