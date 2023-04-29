@@ -2,9 +2,12 @@
 - TypeScript
 - Next.js
 - Recoil
+- SWR
+- Zod
 - Tailwind CSS
 - ESlint
 - Prettier
+- husky
 
 ## ディレクトリ構成
 
