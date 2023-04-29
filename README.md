@@ -75,7 +75,8 @@ _app.tsxでproviderを沢山ネストさせないために、_app.tsxでは必�
 ```
 
 ## features
-components、hooksなどこのディレクトリ階層は必要に応じて増えたり、減ったり（testsやstoriesなど）する。
+components、hooksなどこのディレクトリ階層は必要に応じて増えたり、減ったり（states、tests、storiesなど）する。
+statesはreducerやcookies、localstorageなどを定義する。
 
 ```
 features
@@ -92,6 +93,7 @@ features
 │  ├─ types/
 │  │  ├─ posts-type.ts/
 │  │  ├─ index.ts/
+│  ├─ states/
 │  ├─ tests/
 │  ├─ stories/
 ```
