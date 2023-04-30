@@ -27,7 +27,7 @@ src
 └── utils             # 共通のユーティリティ関数
 ```
 
-## components
+### src/components
 comonentsでは、HeaderやFooterなど共通パーツや、Elementsファイル内にボタンやスピナーなど粒度の小さいUI要素を置く場所。
 
 ```
@@ -42,7 +42,7 @@ components
 ├─ Layouts/
 ```
 
-### Layouts
+#### src/components/Layouts
 LayoutsではMainLayoutやErrorLayoutなどを置く。<br />
 _app.tsxでproviderを沢山ネストさせないために、_app.tsxでは必要最低限の処理を書き、他はLayout毎にに定義してFirst Load JS shared by allを少なくさせる。<br />
 ＊ Layoutが切り替わってしまう場合は、各Layoutに定義されている状態を保持できないので注意する。
@@ -74,7 +74,7 @@ _app.tsxでproviderを沢山ネストさせないために、_app.tsxでは必�
     </>
 ```
 
-## features
+### src/features
 components、hooksなどこのディレクトリ階層は必要に応じて増えたり、減ったり（states、tests、storiesなど）する。<br />
 ＊ statesはreducerやcookie、localstorageなどを定義する。
 
@@ -99,7 +99,7 @@ features
 ```
 
 
-## page-components
+### src/page-components
 featuresのcomponentをレイアウトに合うように置いていく場所。<br />
 基本的にdivタグとcoponentでスタイルを調整して、表示するページ要件に合うように配置していく。<br />
 Nextjsのpagesルーティング内でなるべく依存関係を作らないように一つレイヤーを挟むイメージ。
@@ -133,6 +133,10 @@ page-components
 | hooks       | キャメルケース（camelCase）|
 | 上記以外 |ケバブケース（kebab-case）|
 
-* src/pagesのpath（url）について <br />
+以下を参考 <br />
+[vercel/commerce](https://github.com/vercel/commerce)
+<br />
+<br />
+src/pagesのpath（url）について <br />
 以下参考に２単語以上の英単語の場合はケバブケース（kebab-cse）を推奨。<br />
 [Google検索セントラル](https://developers.google.com/search/docs/crawling-indexing/url-structure?hl=ja)
