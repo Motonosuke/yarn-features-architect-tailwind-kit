@@ -75,8 +75,7 @@ _app.tsxでproviderを沢山ネストさせないために、_app.tsxでは必�
 ```
 
 ### src/features
-components、hooksなどこのディレクトリ階層は必要に応じて増えたり、減ったり（states、tests、storiesなど）する。<br />
-＊ statesはreducerやcookie、localstorageなどを定義する。
+components、hooksなどこのディレクトリ階層は必要に応じて増えたり、減ったり（validates、tests、storiesなど）する。<br />
 
 ```
 features
@@ -93,7 +92,7 @@ features
 │  ├─ types/
 │  │  ├─ posts-type.ts/
 │  │  ├─ index.ts/
-│  ├─ states/
+│  ├─ validates/
 │  ├─ tests/
 │  ├─ stories/
 ```
