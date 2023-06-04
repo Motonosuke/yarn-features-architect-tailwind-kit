@@ -332,7 +332,7 @@
   resolved "https://registry.yarnpkg.com/@markuplint/i18n/-/i18n-3.8.0.tgz#b9ecc8c36c419e1bdfef11d9e3c7b09b40caa058"
   integrity sha512-xcWHRKviM52T8gli0wqojTaKZpWFYTOmi3BSN/p4Uk8eh9bIKV3o2qgJUYMEABWyxYewZv7ZpaptMt7WmxiDwA==
 
-"@markuplint/jsx-parser@^3.7.0":
+"@markuplint/jsx-parser@3.7.0":
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/@markuplint/jsx-parser/-/jsx-parser-3.7.0.tgz#0f3bb4af06548ec25da7a9d7f5268c33577dfe00"
   integrity sha512-kZ8bg7C8daPG4aRy4yVKFMJwiCZLvTzcZM2+Pf4VKa+YiEKKQZqBA4b6rlpg1p2oEAZDbyDynVjYVjv//jEX5g==
@@ -407,7 +407,7 @@
     type-fest "^3.10.0"
     uuid "^9.0.0"
 
-"@markuplint/react-spec@^3.8.0":
+"@markuplint/react-spec@3.8.0":
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/@markuplint/react-spec/-/react-spec-3.8.0.tgz#757d27e6c088714930c584951436f6e8d8c9538b"
   integrity sha512-n1XkSFX5a4RsDmeIQMYxgrbn6xyLpObDRfTeeQpJ3UW9OiRh7pDQtMybWoIPCnOadd3tW8AFF/0a7IPoQGv3vA==
@@ -468,7 +468,7 @@
     type-fest "^3.10.0"
     whatwg-mimetype "^3.0.0"
 
-"@next/bundle-analyzer@^13.4.4":
+"@next/bundle-analyzer@13.4.4":
   version "13.4.4"
   resolved "https://registry.yarnpkg.com/@next/bundle-analyzer/-/bundle-analyzer-13.4.4.tgz#629f318007291203645a335e5387f50053223a98"
   integrity sha512-OxdqGfzElMjcLDw3XkUTqpEjyB/R2n3sOjiWuOGm414j5hAD2AIcXWv4q6FTN9rERgojrkw+g3z5yeLZgJ3YKg==
@@ -2038,6 +2038,16 @@ eslint-plugin-sort-destructure-keys@1.4.0:
   integrity sha512-txU9l22mblz7YpyjJNYFy4wb5PVXiRMbc9lqFPPhvY4wKyBBYQvb31TIcduf7iRb4Bv01aiXcJiuCkOOrVY48Q==
   dependencies:
     natural-compare-lite "^1.4.0"
+
+eslint-plugin-strict-dependencies@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-strict-dependencies/-/eslint-plugin-strict-dependencies-1.1.0.tgz#3910bdb4efe789d696f32332ee6ee242251ae254"
+  integrity sha512-VGI4wBQNPqGgslyQLVvxKFYzl6s0HG3FD5Z4CUSRauY9ik7dXMFo6Gk4nW3fp/NAKnCJAdk9cjm1oVM7cnw/GA==
+  dependencies:
+    is-glob "^4.0.3"
+    micromatch "^4.0.4"
+    normalize-path "^3.0.0"
+    require-strip-json-comments "^2.0.0"
 
 eslint-plugin-tailwindcss@3.11.0:
   version "3.11.0"
@@ -4366,6 +4376,13 @@ require-from-string@^2.0.2:
   resolved "https://registry.yarnpkg.com/require-from-string/-/require-from-string-2.0.2.tgz#89a7fdd938261267318eafe14f9c32e598c36909"
   integrity sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==
 
+require-strip-json-comments@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/require-strip-json-comments/-/require-strip-json-comments-2.0.0.tgz#71733597bdd5c8581e1c01af485e3540ddc1f5a4"
+  integrity sha512-Pta3KVBaVZ9DHMoOGRd+3PEc/EFZAQ1JVHQpKZfPo018fdT9iEsyPBzqNAgJAzKMF4kbr5G7GaqP0+UOwnGfPw==
+  dependencies:
+    strip-json-comments "^3.0"
+
 resolve-dir@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/resolve-dir/-/resolve-dir-1.0.1.tgz#79a40644c362be82f26effe739c9bb5382046f43"
@@ -4776,7 +4793,7 @@ strip-indent@^4.0.0:
   dependencies:
     min-indent "^1.0.1"
 
-strip-json-comments@^3.0.1, strip-json-comments@^3.1.0, strip-json-comments@^3.1.1:
+strip-json-comments@^3.0, strip-json-comments@^3.0.1, strip-json-comments@^3.1.0, strip-json-comments@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.1.1.tgz#31f1281b3832630434831c310c01cccda8cbe006"
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==

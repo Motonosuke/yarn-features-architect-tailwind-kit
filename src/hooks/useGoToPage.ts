@@ -1,10 +1,10 @@
-import { useRouter } from 'next/router';
 import { useCallback } from 'react';
 
 import { ROUTE_PATHS } from 'constants/route-paths';
+import { NextUseRouter } from 'libs/router';
 
 export const useGoToPage = () => {
-  const router = useRouter();
+  const router = NextUseRouter();
 
   const goToHomePage = useCallback(() => {
     router.push(ROUTE_PATHS.HOME);

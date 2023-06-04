@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@ls-lint/ls-lint": "2.0.0",
-    "@next/bundle-analyzer": "^13.4.4",
+    "@next/bundle-analyzer": "13.4.4",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -38,8 +38,8 @@
   "devDependencies": {
     "@commitlint/cli": "17.6.5",
     "@commitlint/config-conventional": "17.6.5",
-    "@markuplint/jsx-parser": "^3.7.0",
-    "@markuplint/react-spec": "^3.8.0",
+    "@markuplint/jsx-parser": "3.7.0",
+    "@markuplint/react-spec": "3.8.0",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@typescript-eslint/eslint-plugin": "5.50.0",
@@ -52,6 +52,7 @@
     "eslint-config-prettier": "8.6.0",
     "eslint-plugin-import": "2.27.5",
     "eslint-plugin-sort-destructure-keys": "1.4.0",
+    "eslint-plugin-strict-dependencies": "1.1.0",
     "eslint-plugin-tailwindcss": "3.11.0",
     "eslint-plugin-typescript-sort-keys": "2.3.0",
     "husky": "8.0.3",

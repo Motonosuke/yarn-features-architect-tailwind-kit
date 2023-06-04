@@ -25,7 +25,14 @@
       }
     }
   },
-  "plugins": ["react", "tailwindcss", "@typescript-eslint", "sort-destructure-keys", "typescript-sort-keys"],
+  "plugins": [
+    "react",
+    "tailwindcss",
+    "@typescript-eslint",
+    "sort-destructure-keys",
+    "typescript-sort-keys",
+    "strict-dependencies"
+  ],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -38,6 +45,21 @@
     "no-console": ["error", { "allow": ["warn", "info", "error"] }],
     "prefer-const": "error",
     "no-restricted-syntax": ["error", { "selector": "TSEnumDeclaration" }],
+    "strict-dependencies/strict-dependencies": [
+      "error",
+      [
+        {
+          "module": "next/router",
+          "allowReferenceFrom": ["src/libs/router.ts"],
+          "allowSameModule": false
+        },
+        {
+          "module": "next/image",
+          "allowReferenceFrom": ["src/libs/image.ts"],
+          "allowSameModule": false
+        }
+      ]
+    ],
 
     // react
     "react/display-name": "error",
