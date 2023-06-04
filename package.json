@@ -12,7 +12,8 @@
     "lint:github-actions": "eslint --ext .js,.ts,.tsx",
     "lint:file": "ls-lint",
     "prepare": "husky install",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "analyze": "ANALYZE=true yarn build"
   },
   "husky": {
     "hooks": {
@@ -27,6 +28,7 @@
   },
   "dependencies": {
     "@ls-lint/ls-lint": "2.0.0",
+    "@next/bundle-analyzer": "^13.4.4",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
