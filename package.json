@@ -10,6 +10,7 @@
     "lint": "eslint --ext .js,.ts,.tsx 'src/**/*.{js,ts,tsx}'",
     "lint:fix": "eslint --ext .js,.ts,.tsx --fix 'src/**/*.{js,ts,tsx}' && prettier --write 'src/**/*.{js,ts,tsx,json}'",
     "lint:github-actions": "eslint --ext .js,.ts,.tsx",
+    "lint:file": "ls-lint",
     "prepare": "husky install",
     "lint-staged": "lint-staged"
   },
@@ -25,6 +26,7 @@
     ]
   },
   "dependencies": {
+    "@ls-lint/ls-lint": "^2.0.0",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",

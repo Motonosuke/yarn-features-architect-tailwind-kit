@@ -1,0 +1,55 @@
+ls:
+  src/{constants,libs,providers,stores,styles,types,utils}:
+    .dir: kebab-case | regex:.*__tests__.* | regex:.*__snapshots__.*
+    .ts: kebab-case
+    .tsx: kebab-case
+    .test.ts: kebab-case
+    .test.tsx: kebab-case
+    .stories.tsx: kebab-case
+
+  src/components/*:
+    .dir: PascalCase
+
+  src/features/*:
+    .dir: kebab-case
+  src/features/*/{api,types}:
+    .ts: kebab-case
+  src/features/*/components:
+    .tsx: PascalCase
+    .ts: camelCase
+  src/features/*/hooks:
+    .ts: camelCase
+
+  src/hooks:
+    .ts: camelCase
+
+  src/page-components:
+    .dir: kebab-case
+    .ts:  camelCase
+    .tsx: PascalCase
+
+  src/pages/*:
+    .dir: kebab-case
+    .tsx: camelCase
+  src/pages:
+    .tsx: camelCase
+
+  public:
+    .dir: kebab-case
+    .png: snake_case
+    .jpg: snake_case
+    .svg: snake_case
+    .ico: snake_case
+    .xml: snake_case
+    .txt: snake_case
+
+ignore:
+  - node_modules
+  - .next
+  - .git
+  - .hygen
+  - .husky
+  - .vscode
+  - src/pages/_app.tsx
+  - src/pages/_document.tsx
+  - src/types/next.d.ts
