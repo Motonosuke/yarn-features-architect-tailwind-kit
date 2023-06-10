@@ -1,8 +1,8 @@
+import type { CustomLayout } from 'next';
 import { RecoilRoot } from 'recoil';
 
-import type { CustomLayout } from 'next';
-
 import { MainHeader } from 'components/Header';
+
 import { GlobalStateMainLayoutProvider } from 'providers/global-state-control-provider/global-state-main-layout-provider';
 
 export const MainLayout: CustomLayout = (page) => {

@@ -1,7 +1,8 @@
 import useSWR from 'swr';
 
-import { Posts, PostsEntity } from 'features/posts/types';
 import { axios } from 'libs/axios';
+
+import { Posts, PostsEntity } from 'features/posts/types';
 
 /**
  * Postsを取得

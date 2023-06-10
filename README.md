@@ -113,7 +113,7 @@ This is the place where components from features are placed to match the layout.
 page-components
 ├─ posts/
 │  ├─ Page.tsx/
-│  ├─ index.ts/ 
+│  ├─ index.ts/
 ```
 
 ```
@@ -257,7 +257,7 @@ Nextjsのpagesルーティング内でなるべく依存関係を作らないよ
 page-components
 ├─ posts/
 │  ├─ Page.tsx/
-│  ├─ index.ts/ 
+│  ├─ index.ts/
 ```
 
 ```

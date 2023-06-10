@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { LoadingSpinner } from 'components/Loading';
+
 import { useAlbumsState } from 'stores/albums';
 
 export const Albums: React.FunctionComponent = () => {

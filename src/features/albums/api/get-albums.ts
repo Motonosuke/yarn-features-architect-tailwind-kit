@@ -1,7 +1,8 @@
 import useSWR from 'swr';
 
-import { Albums, AlbumsEntity } from 'features/albums/types';
 import { axios } from 'libs/axios';
+
+import { Albums, AlbumsEntity } from 'features/albums/types';
 
 /**
  * Postsを取得
