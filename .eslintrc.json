@@ -31,7 +31,8 @@
     "@typescript-eslint",
     "sort-destructure-keys",
     "typescript-sort-keys",
-    "strict-dependencies"
+    "strict-dependencies",
+    "import-access"
   ],
   "extends": [
     "eslint:recommended",
@@ -45,9 +46,22 @@
     "no-console": ["error", { "allow": ["warn", "info", "error"] }],
     "prefer-const": "error",
     "no-restricted-syntax": ["error", { "selector": "TSEnumDeclaration" }],
+
+    // import
+    "import-access/jsdoc": ["error"],
     "strict-dependencies/strict-dependencies": [
       "error",
       [
+        {
+          "module": "features/**/components/**",
+          "allowReferenceFrom": ["src/page-components/**/*"],
+          "allowSameModule": false
+        },
+        {
+          "module": "page-components/**/*",
+          "allowReferenceFrom": ["src/pages/**/*"],
+          "allowSameModule": false
+        },
         {
           "module": "next/router",
           "allowReferenceFrom": ["src/libs/router.ts"],
@@ -60,6 +74,16 @@
         }
       ]
     ],
+
+    // sort
+    "typescript-sort-keys/interface": [
+      "error",
+      "asc",
+      { "caseSensitive": false, "natural": true, "requiredFirst": true }
+    ],
+    "typescript-sort-keys/string-enum": "error",
+    "react/jsx-sort-props": ["error", { "shorthandFirst": true }],
+    "sort-destructure-keys/sort-destructure-keys": 2,
 
     // react
     "react/display-name": "error",
@@ -98,17 +122,7 @@
         "format": ["PascalCase"],
         "prefix": ["is", "should", "has", "can", "did", "will", "no"]
       }
-    ],
-
-    // sort
-    "typescript-sort-keys/interface": [
-      "error",
-      "asc",
-      { "caseSensitive": false, "natural": true, "requiredFirst": true }
-    ],
-    "typescript-sort-keys/string-enum": "error",
-    "react/jsx-sort-props": ["error", { "shorthandFirst": true }],
-    "sort-destructure-keys/sort-destructure-keys": 2
+    ]
   },
   "overrides": [
     {
@@ -116,6 +130,12 @@
       "excludedFiles": ["src/components/**/*", "src/page-components/**/*", "src/features/**/*"],
       "rules": {
         "no-restricted-imports": ["error", { "patterns": ["./", "../"] }]
+      }
+    },
+    {
+      "files": ["src/providers/**/*", "src/stores/**/*"],
+      "rules": {
+        "import-access/jsdoc": "off"
       }
     }
   ]

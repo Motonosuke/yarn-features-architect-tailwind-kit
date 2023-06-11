@@ -1,10 +1,8 @@
-import React from 'react';
-
 import { LoadingSpinner } from 'components/Loading';
 
 import { useFetchPosts } from 'features/posts/hooks';
 
-export const Posts: React.FunctionComponent = () => {
+export const Posts = () => {
   const { postsData } = useFetchPosts();
 
   if (!postsData) return <LoadingSpinner />;

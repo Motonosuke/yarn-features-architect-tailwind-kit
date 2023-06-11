@@ -1,1 +1,4 @@
-export * from './get-post';
+/**
+ * @package
+ */
+export { useGetPosts } from './get-post';

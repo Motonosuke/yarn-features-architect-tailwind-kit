@@ -7,6 +7,7 @@ import { Albums, AlbumsEntity } from 'features/albums/types';
 /**
  * Postsを取得
  * @returns
+ * @package
  */
 
 export const useGetAlbums = () => {

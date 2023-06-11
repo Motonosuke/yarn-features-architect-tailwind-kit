@@ -8,9 +8,19 @@ const zPostScheme = z.object({
 });
 const zPostsScheme = z.array(zPostScheme);
 
+/**
+ * @package
+ */
 export type Post = z.infer<typeof zPostScheme>;
+
+/**
+ * @package
+ */
 export type Posts = z.infer<typeof zPostsScheme>;
 
+/**
+ * @package
+ */
 export class PostsEntity {
   readonly body!: string;
   readonly id!: number;
