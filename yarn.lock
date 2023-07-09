@@ -440,7 +440,7 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@ianvs/prettier-plugin-sort-imports@^4.0.2":
+"@ianvs/prettier-plugin-sort-imports@4.0.2":
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/@ianvs/prettier-plugin-sort-imports/-/prettier-plugin-sort-imports-4.0.2.tgz#a76f9ed2b5a3494a23564f6f189f3b4e4a472f67"
   integrity sha512-VnsTzyb9aSWpc3v6HvZKD6eolZRvofIYjhda+6IbW1GYwr2byWqK0KhLPbYNkit9MAgShad5bhZ1hgBn867A1A==
@@ -911,7 +911,7 @@
   resolved "https://registry.yarnpkg.com/@secretlint/profiler/-/profiler-7.0.3.tgz#2cced8c1a4caee8aa3f7db8dfd005ae96755a8e7"
   integrity sha512-cv2qy84HyP6L342xjRKp+Kg64F020Edm9MD3+zLrDY+4WPHBJo6qRO03QtviVVZpn3Lr3roiQOyEM6TnqaS17w==
 
-"@secretlint/secretlint-rule-preset-recommend@^7.0.3":
+"@secretlint/secretlint-rule-preset-recommend@7.0.3":
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/@secretlint/secretlint-rule-preset-recommend/-/secretlint-rule-preset-recommend-7.0.3.tgz#4db630de3ab780dcc8baa3e294f818657a2fa5d8"
   integrity sha512-+Qg0HPoab1XEX+fdPDFLyG009KstqxiU1lN0+6/DbZxJYWEOG459k+lGJpiHfCUThXPlsSeKcIXtKtLehySfQg==
@@ -2426,7 +2426,7 @@ eslint-module-utils@^2.7.4:
   dependencies:
     debug "^3.2.7"
 
-eslint-plugin-import-access@^1.1.2:
+eslint-plugin-import-access@1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import-access/-/eslint-plugin-import-access-1.1.2.tgz#02140cbf28c6952d8505993e4c1c5b46dbb76fe6"
   integrity sha512-9c4DZzYlKS8SgV0RmgFeVSEksbbyuEX/FxNw05gFa+rbscSGMHiFOiO2ledYnfbrUJPsrO3alb0oEVNtXj0oIw==
@@ -3983,7 +3983,7 @@ map-obj@^4.0.0, map-obj@^4.3.0:
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-4.3.0.tgz#9304f906e93faae70880da102a9f1df0ea8bb05a"
   integrity sha512-hdN1wVrZbb29eBGiGjJbeP8JbKjq1urkHJ/LIP/NY48MZ1QVXUsQBV1G1zvYFHn1XE06cwjBsOI2K3Ulnj1YXQ==
 
-markuplint@^3.10.0:
+markuplint@3.10.0:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/markuplint/-/markuplint-3.10.0.tgz#201b6c2a5964eeedafcfb648bf791e25a4c07d1e"
   integrity sha512-W4zuPJ62rxMbIAW3xTcgO0D6FPflpVEKwst/mfzAVYT7ddIS99ks41z4TnQzCZH3d752XAxxclDXIqE7X2clcA==
@@ -5090,7 +5090,7 @@ scheduler@^0.23.0:
   dependencies:
     loose-envify "^1.1.0"
 
-secretlint@^7.0.3:
+secretlint@7.0.3:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/secretlint/-/secretlint-7.0.3.tgz#ce0b6891be3cfb2e73d37ae2d692a2afc278e75b"
   integrity sha512-SUdZFVau9mybs7u4QrxTfcp3EynQcyUEkghNhn7Fv2FXcaeUSFnENX4eUBZA5n3NzHzOPC1+kyZP6eigHLbP0w==
