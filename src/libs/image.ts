@@ -1,3 +1,1 @@
-import NextImage from 'next/image';
-
-export { NextImage };
+export { default as NextImage } from 'next/image';

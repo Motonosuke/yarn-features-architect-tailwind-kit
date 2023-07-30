@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "type-check": "tsc --noEmit",
     "lint:prettier": "prettier --write 'src/**/*.{js,ts,tsx,json}'",
     "lint:eslint": "eslint --ext .js,.ts,.tsx 'src/**/*.{js,ts,tsx}'",
     "lint:secretlint": "secretlint '**/*'",
@@ -13,7 +14,7 @@
     "lint:markup-lint": "markuplint 'src/**/*.{jsx,tsx}'",
     "lint:github-actions": "eslint --ext .js,.ts,.tsx",
     "lint:ts-prune": "ts-prune",
-    "lint:all": "yarn lint:prettier && yarn lint:eslint && yarn lint:markup-lint && yarn lint:secretlint && yarn lint:ls-lint && yarn lint:ts-prune",
+    "lint:all": "yarn type-check && yarn lint:prettier && yarn lint:eslint && yarn lint:markup-lint && yarn lint:secretlint && yarn lint:ls-lint && yarn lint:ts-prune",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
     "analyze": "ANALYZE=true yarn build"

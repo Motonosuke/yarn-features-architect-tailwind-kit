@@ -68,6 +68,11 @@
           "allowSameModule": false
         },
         {
+          "module": "next/link",
+          "allowReferenceFrom": ["src/libs/link.ts"],
+          "allowSameModule": false
+        },
+        {
           "module": "next/image",
           "allowReferenceFrom": ["src/libs/image.ts"],
           "allowSameModule": false
