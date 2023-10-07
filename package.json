@@ -65,7 +65,7 @@
     "lint-staged": "13.1.0",
     "markuplint": "3.10.0",
     "nookies": "2.5.2",
-    "postcss": "8.4.21",
+    "postcss": "8.4.24",
     "prettier": "2.8.4",
     "prettier-plugin-tailwindcss": "0.2.4",
     "secretlint": "7.0.3",
