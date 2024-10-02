@@ -26,13 +26,13 @@
   },
   "dependencies": {
     "next": "13.1.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "recoil": "0.7.6"
   },
   "devDependencies": {
     "@types/node": "18.11.18",
-    "@types/react": "18.2.8",
+    "@types/react": "18.3.11",
     "@typescript-eslint/eslint-plugin": "5.50.0",
     "@typescript-eslint/parser": "5.50.0",
     "autoprefixer": "10.4.13",
